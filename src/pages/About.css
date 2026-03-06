@@ -1,0 +1,335 @@
+/* About Page Styles */
+.about-page {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.about-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #0d0d0d;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    url('/images/h.jpeg') center/cover no-repeat;
+  opacity: 0.4;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 13, 13, 0.7) 0%,
+    rgba(13, 13, 13, 0.5) 50%,
+    rgba(13, 13, 13, 0.9) 100%
+  );
+  pointer-events: none;
+}
+
+.about-hero-content {
+  text-align: center;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.about-hero-tagline {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.about-hero-heading {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.about-hero-subheading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.about-hero-decoration {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-hero-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, #d4af37, transparent);
+  margin: 0 auto;
+}
+
+/* Section Label */
+.about-section-label {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Story Section */
+.about-story {
+  padding: 100px 2rem;
+  background-color: #0d0d0d;
+}
+
+.about-story-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-story-image {
+  position: relative;
+}
+
+.about-story-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.about-story-image-accent {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.about-story-content {
+  padding: 2rem 0;
+}
+
+.about-story-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.about-story-text p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.about-story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Three Pillars Section */
+.about-pillars {
+  padding: 100px 2rem;
+  background-color: #0a0a0a;
+}
+
+.about-pillars-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-pillars-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 4rem;
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.about-pillar {
+  padding: 3rem 2rem;
+  background-color: #111111;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.about-pillar:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-pillar-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+}
+
+.about-pillar-icon svg {
+  width: 64px;
+  height: 64px;
+}
+
+.about-pillar-heading {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.about-pillar-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-story-container {
+    gap: 3rem;
+  }
+  
+  .about-pillars-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 70vh;
+  }
+  
+  .about-hero-heading {
+    font-size: 2.5rem;
+  }
+  
+  .about-story {
+    padding: 80px 1.5rem;
+  }
+  
+  .about-story-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-story-image {
+    order: -1;
+  }
+  
+  .about-story-image img {
+    height: 400px;
+  }
+  
+  .about-story-image-accent {
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+  }
+  
+  .about-story-title {
+    font-size: 2rem;
+  }
+  
+  .about-pillars {
+    padding: 80px 1.5rem;
+  }
+  
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .about-pillars-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .about-pillar {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-heading {
+    font-size: 2rem;
+  }
+  
+  .about-hero-subheading {
+    font-size: 1rem;
+  }
+  
+  .about-story-text p {
+    font-size: 0.9375rem;
+  }
+  
+  .about-pillar-heading {
+    font-size: 1.25rem;
+  }
+}
+

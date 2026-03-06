@@ -1,0 +1,198 @@
+/* Bespoke Services Section */
+.bespoke-section {
+  padding: 100px 2rem;
+  background-color: #0a0a0a;
+}
+
+.bespoke-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.bespoke-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  min-height: 600px;
+}
+
+/* Left: Content */
+.bespoke-content {
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0d0d0d;
+}
+
+/* Right: Media */
+.bespoke-media {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+
+.bespoke-media-wrapper {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+}
+
+.bespoke-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bespoke-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bespoke-media-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.4) 0%,
+    rgba(10, 10, 10, 0) 60%
+  );
+  pointer-events: none;
+}
+
+.bespoke-tagline {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  align-self: flex-start;
+}
+
+.bespoke-heading {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.bespoke-copy {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Gold Outlined Button */
+.bespoke-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.125rem 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4af37;
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.bespoke-btn:hover {
+  background-color: #d4af37;
+  color: #0d0d0d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .bespoke-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .bespoke-media {
+    min-height: 350px;
+  }
+  
+  .bespoke-media-wrapper {
+    min-height: 350px;
+  }
+  
+  .bespoke-content {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bespoke-section {
+    padding: 60px 1.5rem;
+  }
+  
+  .bespoke-media {
+    min-height: 280px;
+  }
+  
+  .bespoke-media-wrapper {
+    min-height: 280px;
+  }
+  
+  .bespoke-content {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .bespoke-heading {
+    font-size: 1.75rem;
+  }
+  
+  .bespoke-copy {
+    font-size: 1rem;
+  }
+  
+  .bespoke-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .bespoke-tagline {
+    font-size: 0.6875rem;
+  }
+  
+  .bespoke-heading {
+    font-size: 1.5rem;
+  }
+  
+  .bespoke-copy {
+    font-size: 0.9375rem;
+  }
+}
+

@@ -1,0 +1,755 @@
+/* Custom Order Page Styles */
+.custom-order-page {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.custom-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #0d0d0d;
+  overflow: hidden;
+}
+
+.custom-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1920&q=80') center/cover no-repeat;
+  opacity: 0.4;
+}
+
+.custom-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13, 13, 13, 0.8) 0%,
+    rgba(13, 13, 13, 0.6) 50%,
+    rgba(13, 13, 13, 0.9) 100%
+  );
+  pointer-events: none;
+}
+
+.custom-hero-content {
+  text-align: center;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.custom-hero-tagline {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.custom-hero-heading {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.custom-hero-subheading {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Section Label */
+.custom-section-label {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Container */
+.custom-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Configurator Section */
+.custom-configurator {
+  padding: 80px 2rem;
+  background-color: #0d0d0d;
+}
+
+.custom-configurator-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.custom-configurator-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.custom-configurator-subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+.custom-form {
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 3rem;
+}
+
+.custom-form-group {
+  margin-bottom: 2rem;
+}
+
+.custom-form-label {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.custom-form-hint {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Select Dropdown */
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 1rem 3rem 1rem 1.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+.custom-select.active {
+  border-color: #d4af37;
+}
+
+.custom-select option {
+  background-color: #0d0d0d;
+  color: #ffffff;
+}
+
+.custom-select-arrow {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.custom-select-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Option Buttons */
+.custom-options-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.custom-options-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.custom-option-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-option-btn:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  background-color: #111111;
+}
+
+.custom-option-btn.active {
+  border-color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.05);
+}
+
+.custom-option-icon {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s ease;
+}
+
+.custom-option-btn.active .custom-option-icon {
+  color: #d4af37;
+}
+
+.custom-option-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-option-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s ease;
+}
+
+.custom-option-btn.active .custom-option-text {
+  color: #d4af37;
+}
+
+/* Engraving Input */
+.custom-engraving-wrapper {
+  position: relative;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-input:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+.custom-char-count {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Form Row */
+.custom-form-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+  margin: 3rem 0;
+}
+
+.custom-form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Submit Button */
+.custom-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  margin-top: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #0d0d0d;
+  background-color: #d4af37;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-submit-btn:hover {
+  background-color: #e5c14a;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.35);
+}
+
+.custom-submit-icon {
+  display: flex;
+  align-items: center;
+}
+
+.custom-submit-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Process Section */
+.custom-process {
+  padding: 80px 2rem;
+  background-color: #0a0a0a;
+}
+
+.custom-process-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.custom-process-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.custom-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.custom-process-step {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.custom-process-number {
+  display: inline-block;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d4af37;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.custom-process-step-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.custom-process-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .custom-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .custom-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-hero {
+    min-height: 50vh;
+  }
+  
+  .custom-configurator {
+    padding: 60px 1.5rem;
+  }
+  
+  .custom-form {
+    padding: 2rem 1.5rem;
+  }
+  
+  .custom-form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .custom-submit-btn {
+    padding: 1.25rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .custom-process {
+    padding: 60px 1.5rem;
+  }
+  
+  .custom-process-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-hero-heading {
+    font-size: 2rem;
+  }
+  
+  .custom-hero-subheading {
+    font-size: 1rem;
+  }
+  
+  .custom-options-grid,
+  .custom-options-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .custom-option-btn {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+  
+  .custom-option-icon {
+    margin-bottom: 0;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Technical Specs - Slider */
+.custom-slider-container {
+  padding: 0.5rem 0;
+}
+
+.custom-slider {
+  width: 100%;
+  height: 6px;
+  background: #0a0a0a;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: #d4af37;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+  transition: all 0.2s ease;
+}
+
+.custom-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.6);
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #d4af37;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+}
+
+.custom-slider-value {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4af37;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.custom-slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.25rem;
+}
+
+/* Handedness Toggle */
+.custom-toggle-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.custom-toggle-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-toggle-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.custom-toggle-btn:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.custom-toggle-btn.active {
+  border-color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.1);
+  color: #d4af37;
+}
+
+/* Reference Upload Zone */
+.custom-upload-zone {
+  position: relative;
+  border: 2px dashed rgba(212, 175, 55, 0.4);
+  border-radius: 8px;
+  padding: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #0a0a0a;
+}
+
+.custom-upload-zone:hover {
+  border-color: #d4af37;
+  background-color: rgba(212, 175, 55, 0.03);
+}
+
+.custom-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.custom-upload-icon {
+  width: 48px;
+  height: 48px;
+  color: #d4af37;
+}
+
+.custom-upload-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-upload-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-upload-subtext {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Upload Preview */
+.custom-upload-preview {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.custom-upload-preview-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.custom-upload-preview-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-upload-preview-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.custom-upload-filename {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  word-break: break-all;
+}
+
+.custom-upload-remove {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.custom-upload-remove:hover {
+  color: #ff4757;
+}
+
+/* Textarea for Engraving */
+.custom-textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.custom-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-textarea:focus {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.1);
+}
+
+/* Character Counter */
+.custom-char-counter {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: right;
+  margin-top: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.custom-char-counter.limit-reached {
+  color: #ff6b6b;
+}
+
+/* Loading Animation */
+.custom-submit-btn.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.custom-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.custom-loading-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(13, 13, 13, 0.3);
+  border-top-color: #0d0d0d;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
