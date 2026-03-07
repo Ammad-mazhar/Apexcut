@@ -27,7 +27,7 @@ function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <span className="logo-text">APEXCUT</span>
+          <img src="/logo/logo2.png" alt="ApexCut Logo" className="logo-image" />
         </Link>
 
         {/* Desktop Navigation */}

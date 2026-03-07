@@ -9,7 +9,7 @@ function Footer() {
           {/* Column 1: Logo & About */}
           <div className="footer-col footer-about">
             <Link to="/" className="footer-logo">
-              APEXCUT
+              <img src="/logo/logo.png" alt="ApexCut Logo" className="footer-logo-image" />
             </Link>
             <p className="footer-about-text">
               Premium professional grooming tools crafted with Japanese precision. 

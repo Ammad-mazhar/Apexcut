@@ -22,6 +22,12 @@
   text-decoration: none;
 }
 
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
 .logo-text {
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: 1.75rem;

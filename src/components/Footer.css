@@ -28,12 +28,13 @@
 
 .footer-logo {
   display: inline-block;
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #ffffff;
   text-decoration: none;
-  letter-spacing: 0.05em;
+}
+
+.footer-logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
   margin-bottom: 1.25rem;
 }
 
