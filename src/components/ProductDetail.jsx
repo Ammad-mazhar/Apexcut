@@ -1,15 +1,32 @@
 import { useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { products } from '../data/products'
+import { useCart } from '../context/CartContext'
 import './ProductDetail.css'
 
 function ProductDetail() {
+  const { id } = useParams()
+  const product = products.find(p => p.id === parseInt(id))
+  const { addToCart } = useCart()
+  
   const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
   const [activeTab, setActiveTab] = useState('specifications')
 
+  // Get related products (same category, excluding current product, max 3)
+  const relatedProducts = product 
+    ? products
+        .filter(p => p.category === product.category && p.id !== product.id)
+        .slice(0, 3)
+    : []
+
+  // Use product image or fallback
+  const displayImage = product?.image || '/images/bb.jpeg'
+
   const images = [
-    'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=600&h=600&fit=crop',
-    'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=600&h=600&fit=crop',
+    displayImage,
+    displayImage,
+    displayImage,
   ]
 
   const tabs = [
@@ -52,13 +69,28 @@ function ProductDetail() {
     ),
   }
 
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product, quantity)
+    }
+  }
+
+  if (!product) {
+    return (
+      <div className="product-not-found">
+        <h2>Product not found</h2>
+        <Link to="/" className="back-link">Back to Home</Link>
+      </div>
+    )
+  }
+
   return (
     <section className="product-detail">
       <div className="product-container">
         {/* Left Side - Image Gallery */}
         <div className="product-gallery">
           <div className="main-image">
-            <img src={images[selectedImage]} alt="Professional Pet Grooming Scissor" />
+            <img src={images[selectedImage]} alt={product.name} />
           </div>
           <div className="thumbnail-list">
             {images.map((img, index) => (
@@ -75,19 +107,16 @@ function ProductDetail() {
 
         {/* Right Side - Product Info */}
         <div className="product-info">
-          <span className="product-category">Professional Pet Grooming</span>
-          <h1 className="product-title">ApexCut Pro Series</h1>
+          <span className="product-category">{product.category} Grooming</span>
+          <h1 className="product-title">{product.name}</h1>
           
           <div className="product-price-row">
-            <span className="product-price">$189.00</span>
+            <span className="product-price">${product.price.toFixed(2)}</span>
             <span className="stock-badge">In Stock</span>
           </div>
 
           <p className="product-description">
-            Engineered for professional groomers who demand precision and durability. 
-            The ApexCut Pro Series features Japanese 440C steel blades with a convex edge 
-            for effortless cutting through all coat types. The ergonomic offset handle 
-            reduces hand fatigue during long grooming sessions.
+            {product.description}
           </p>
 
           <div className="purchase-section">
@@ -106,7 +135,10 @@ function ProductDetail() {
                 +
               </button>
             </div>
-            <button className="add-to-cart-btn">
+            <button 
+              className="add-to-cart-btn"
+              onClick={handleAddToCart}
+            >
               Add to Cart
             </button>
           </div>
@@ -155,6 +187,30 @@ function ProductDetail() {
           {tabContent[activeTab]}
         </div>
       </div>
+
+      {/* Related Products Section */}
+      {relatedProducts.length > 0 && (
+        <div className="related-products">
+          <h2 className="related-title">Related Scissors</h2>
+          <div className="related-grid">
+            {relatedProducts.map(related => (
+              <Link 
+                key={related.id} 
+                to={`/product/${related.id}`}
+                className="related-card"
+              >
+                <div className="related-image">
+                  <img src={related.image} alt={related.name} />
+                </div>
+                <div className="related-info">
+                  <h3>{related.name}</h3>
+                  <span className="related-price">${related.price.toFixed(2)}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

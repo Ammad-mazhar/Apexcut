@@ -4,6 +4,7 @@ import TrendingSection from '../components/TrendingSection'
 import BestSellerSection from '../components/BestSellerSection'
 import Testimonials from '../components/Testimonials'
 import SocialGrid from '../components/SocialGrid'
+import TrustQuality from '../components/TrustQuality'
 import { Link } from 'react-router-dom'
 import './Home.css'
 
@@ -45,6 +46,9 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Trust & Quality Section */}
+      <TrustQuality />
       
       <Testimonials />
       
